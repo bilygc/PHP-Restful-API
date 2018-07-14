@@ -1,0 +1,121 @@
+{
+    "_readme": [
+        "This file locks the dependencies of your project to a known state",
+        "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
+        "This file is @generated automatically"
+    ],
+    "hash": "b22e6ed8884c70223605e7aedc13cedb",
+    "content-hash": "389fc05ea2c3d5ed741ea90f3dcd13b5",
+    "packages": [
+        {
+            "name": "infobip/infobip-api-php-client",
+            "version": "2.0.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/infobip/infobip-api-php-client.git",
+                "reference": "c3ca9d2b4c0a9243209b0a407dfdfe35e105fe86"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/infobip/infobip-api-php-client/zipball/c3ca9d2b4c0a9243209b0a407dfdfe35e105fe86",
+                "reference": "c3ca9d2b4c0a9243209b0a407dfdfe35e105fe86",
+                "shasum": ""
+            },
+            "require": {
+                "netresearch/jsonmapper": "0.9.0"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "infobip\\": "infobip/",
+                    "infobip\\api\\": "infobip/api/",
+                    "infobip\\api\\client\\": "infobip/api/client/",
+                    "infobip\\api\\configuration\\": "infobip/api/configuration/",
+                    "infobip\\api\\model\\": "infobip/api/model/",
+                    "infobip\\api\\model\\account\\": "infobip/api/model/account/",
+                    "infobip\\api\\model\\conversion\\": "infobip/api/model/conversion/",
+                    "infobip\\api\\model\\nc\\": "infobip/api/model/nc/",
+                    "infobip\\api\\model\\nc\\logs\\": "infobip/api/model/nc/logs/",
+                    "infobip\\api\\model\\nc\\notify\\": "infobip/api/model/nc/notify/",
+                    "infobip\\api\\model\\nc\\query\\": "infobip/api/model/nc/query/",
+                    "infobip\\api\\model\\sms\\": "infobip/api/model/sms/",
+                    "infobip\\api\\model\\sms\\mo\\": "infobip/api/model/sms/mo/",
+                    "infobip\\api\\model\\sms\\mo\\logs\\": "infobip/api/model/sms/mo/logs/",
+                    "infobip\\api\\model\\sms\\mo\\reports\\": "infobip/api/model/sms/mo/reports/",
+                    "infobip\\api\\model\\sms\\mt\\": "infobip/api/model/sms/mt/",
+                    "infobip\\api\\model\\sms\\mt\\logs\\": "infobip/api/model/sms/mt/logs/",
+                    "infobip\\api\\model\\sms\\mt\\reports\\": "infobip/api/model/sms/mt/reports/",
+                    "infobip\\api\\model\\sms\\mt\\send\\": "infobip/api/model/sms/mt/send/",
+                    "infobip\\api\\model\\sms\\mt\\send\\binary\\": "infobip/api/model/sms/mt/send/binary/",
+                    "infobip\\api\\model\\sms\\mt\\send\\textual\\": "infobip/api/model/sms/mt/send/textual/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "Apache-2.0"
+            ],
+            "authors": [
+                {
+                    "email": "libraries@infobip.com"
+                }
+            ],
+            "description": "Infobip SMS library for PHP",
+            "homepage": "http://dev.infobip.com",
+            "keywords": [
+                "Infobip",
+                "api",
+                "hlr",
+                "msisdn",
+                "sms"
+            ],
+            "time": "2017-03-24 14:35:05"
+        },
+        {
+            "name": "netresearch/jsonmapper",
+            "version": "v0.9.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/cweiske/jsonmapper.git",
+                "reference": "1c3803fa6d1be7bd083fb853f1c6af56f96d1833"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/cweiske/jsonmapper/zipball/1c3803fa6d1be7bd083fb853f1c6af56f96d1833",
+                "reference": "1c3803fa6d1be7bd083fb853f1c6af56f96d1833",
+                "shasum": ""
+            },
+            "require-dev": {
+                "phpunit/phpunit": "4.2.*",
+                "squizlabs/php_codesniffer": "~1.5"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-0": {
+                    "": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "OSL-3.0"
+            ],
+            "authors": [
+                {
+                    "name": "Christian Weiske",
+                    "email": "christian.weiske@netresearch.de",
+                    "homepage": "http://www.netresearch.de/",
+                    "role": "Developer"
+                }
+            ],
+            "description": "Map nested JSON structures onto PHP classes",
+            "time": "2015-08-14 14:07:23"
+        }
+    ],
+    "packages-dev": [],
+    "aliases": [],
+    "minimum-stability": "stable",
+    "stability-flags": [],
+    "prefer-stable": false,
+    "prefer-lowest": false,
+    "platform": [],
+    "platform-dev": []
+}
