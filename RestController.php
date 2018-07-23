@@ -5,7 +5,7 @@ header("Access-Control-Allow-Methods: GET, POST, OPTIONS, PUT, DELETE");
 header("Allow: GET, POST, OPTIONS, PUT, DELETE");
 header('Content-Type: application/json');
 require_once("SmsRestHandler.php");
-include_once($_SERVER['DOCUMENT_ROOT']."/clases/generales/Clog.php");
+//include_once($_SERVER['DOCUMENT_ROOT']."/clases/generales/Clog.php");
 		
 /*$method = $_SERVER['REQUEST_METHOD'];
 
@@ -15,7 +15,7 @@ print_r(json_encode($objResponse));*/
 
 $sms = json_decode(file_get_contents("php://input"));
 
-$objLog = new Clog("SmsMasivo");
+//$objLog = new Clog("SmsMasivo");
 //$objLog->escribirLog("idmsg : ".$sms->idmsg );
 //$objLog->escribirLog("Entro: ".$sms->remitente." texto: ".$sms->msg." Numero: ".$sms->destinatarios[0] );
 

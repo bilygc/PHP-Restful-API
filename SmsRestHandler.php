@@ -1,7 +1,7 @@
 <?php
     require_once("Class/SimpleRest.php");
     require_once("Class/Sms.php");
-    include_once($_SERVER['DOCUMENT_ROOT']."/clases/generales/Clog.php");
+    //include_once($_SERVER['DOCUMENT_ROOT']."/clases/generales/Clog.php");
             
     class SmsRestHandler extends SimpleRest {
 
@@ -14,10 +14,10 @@
                 
                 $statusCode = 200;
                 $rawData = array();
-                $objLog = new Clog("SmsMasivo");
+                //$objLog = new Clog("SmsMasivo");
                 foreach ($response as $message) {
                     
-                    $objLog->escribirLog("MessageId : ".$message->getMessageId());
+                    //$objLog->escribirLog("MessageId : ".$message->getMessageId());
                     $rawData['MessageId'] = $message->getMessageId();
                     $rawData['SmsCount'] = $message->getSmsCount();
                     $rawData['BulkId'] = $message->getStatus()->getId();
@@ -45,24 +45,24 @@
 
 
             $requestContentType = $_SERVER['HTTP_ACCEPT'];
-            $objLog->escribirLog("requestcontentype : ".$_SERVER['HTTP_ACCEPT']);
+            //$objLog->escribirLog("requestcontentype : ".$_SERVER['HTTP_ACCEPT']);
             $this ->setHttpHeaders($requestContentType, $statusCode);
             
                     
             if(strpos($requestContentType,'application/json') !== false){
-                $objLog->escribirLog("contentType : ".'application/json');
+                //$objLog->escribirLog("contentType : ".'application/json');
                 $smsResponse = $this->encodeJson($rawData);
                 echo $smsResponse;
             } else if(strpos($requestContentType,'text/html') !== false){
-                $objLog->escribirLog("contentType : ".'text/html');
+                //$objLog->escribirLog("contentType : ".'text/html');
                 $smsResponse = $this->encodeHtml($rawData);
                 echo $smsResponse;
             } else if(strpos($requestContentType,'application/xml') !== false){
-                $objLog->escribirLog("contentType : ".'application/xml');
+                //$objLog->escribirLog("contentType : ".'application/xml');
                 $smsResponse = $this->encodeXml($rawData);
                 echo $smsResponse;
             }else{
-                $objLog->escribirLog("contentType : ".'application/json');
+                //$objLog->escribirLog("contentType : ".'application/json');
                 $smsResponse = $this->encodeJson($rawData);
                 echo $smsResponse;
             }

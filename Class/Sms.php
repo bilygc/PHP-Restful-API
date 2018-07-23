@@ -6,7 +6,7 @@
     use infobip\api\model\Destination;
     use infobip\api\model\sms\mt\send\Message;
     use infobip\api\model\sms\mt\send\textual\SMSAdvancedTextualRequest;
-    include_once($_SERVER['DOCUMENT_ROOT']."/clases/generales/Clog.php");
+    //include_once($_SERVER['DOCUMENT_ROOT']."/clases/generales/Clog.php");
 
 	Class Sms {
 
@@ -17,7 +17,7 @@
 	    
 	    	//$detalleSms = $this->getSmsDetails($sms);
 	 
-	    	$objLog = new Clog("SmsMasivo");
+	    	//$objLog = new Clog("SmsMasivo");
 	    	//$objLog->escribirLog("detinatarios : ".$detalleSms['cDestinatarios'] );
 
 	    	// Create configuration object that will tell the client how to authenticate API requests
@@ -41,7 +41,7 @@
 		    	$destination = new Destination();
 		    	$destination->setTo($numero);
 		    	$destinations[] = $destination;
-		    	$objLog->escribirLog("detinatario ".$key.": ".$numero );
+		    	//$objLog->escribirLog("detinatario ".$key.": ".$numero );
 		    }
 
 		    
@@ -102,8 +102,8 @@
 	    private function getSmsDetails($sms){
 	    	$xml = simplexml_load_file("./configuracion/config.xml") or die("No se puede leer el archivo de configuracion");		    
 
-	    	$objLog = new Clog("SmsMasivo");
-	    	$objLog->escribirLog("id detalles : ".$sms->idmsg );
+	    	//$objLog = new Clog("SmsMasivo");
+	    	//$objLog->escribirLog("id detalles : ".$sms->idmsg );
 		    $host =  $xml->ipserver;
 		    $dbname = $xml->database;
 		    $dbuser = $xml->userdb;
